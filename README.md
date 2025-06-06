@@ -8,6 +8,7 @@ This is a simple FastAPI + HTML/JS demo that simulates the Horizon TV launcher U
 
 ![Architecture Overview](x.png)
 
+![Product Spec and Business doc](https://docs.google.com/document/d/1vL4TgZyP7Z-mUKmGvM0_SydoX3LFFjYa6rqqW5CVsqM/edit?usp=drive_web&ouid=115236876851490607516)
 ---
 
 ## 🧰 Features
