@@ -1,0 +1,20 @@
+{
+  "theme": "dark",
+  "rows": [
+    {
+      "title": "Trending Now",
+      "apps": [
+        "YouTube",
+        "Netflix",
+        "Twitch"
+      ]
+    },
+    {
+      "title": "Continue Watching",
+      "apps": [
+        "Hulu",
+        "Disney+"
+      ]
+    }
+  ]
+}

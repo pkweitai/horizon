@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Horizon TV UI</title>
+  <style>
+    body { background-color: #111; color: #fff; font-family: sans-serif; padding: 20px; }
+    .row { margin-bottom: 30px; }
+    .row-title { font-size: 1.5rem; margin-bottom: 10px; }
+    .apps { display: flex; gap: 20px; }
+    .app { background: #222; padding: 10px 20px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Horizon TV Launcher</h1>
+  <div id="launcher"></div>
+
+  <script>
+    fetch('http://localhost:8000/config')
+      .then(res => res.json())
+      .then(data => {
+        const launcher = document.getElementById('launcher');
+        data.rows.forEach(row => {
+          const rowDiv = document.createElement('div');
+          rowDiv.className = 'row';
+
+          const title = document.createElement('div');
+          title.className = 'row-title';
+          title.innerText = row.title;
+
+          const appsDiv = document.createElement('div');
+          appsDiv.className = 'apps';
+
+          row.apps.forEach(app => {
+            const appBox = document.createElement('div');
+            appBox.className = 'app';
+            appBox.innerText = app;
+            appsDiv.appendChild(appBox);
+          });
+
+          rowDiv.appendChild(title);
+          rowDiv.appendChild(appsDiv);
+          launcher.appendChild(rowDiv);
+        });
+      });
+  </script>
+</body>
+</html>
