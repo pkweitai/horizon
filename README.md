@@ -6,6 +6,8 @@ This is a simple FastAPI + HTML/JS demo that simulates the Horizon TV launcher U
 - A lightweight frontend (`index.html`) that renders the layout dynamically
 - Persistent layout storage via JSON file (`ui_config.json`)
 
+![Architecture Overview](x.png)
+
 ---
 
 ## 🧰 Features
